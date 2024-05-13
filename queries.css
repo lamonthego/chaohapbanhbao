@@ -1,0 +1,128 @@
+:root {
+    --font-color: #212529;
+    --font-color--hover: #343a40;
+    --bg-color: #f8f9fa;
+
+    -font--logo: "Poppins", sans-serif;
+    -font--primary: "Montserrat Alternates", sans-serif;
+    -font-medium: 500;
+    -font-bold: 600;
+
+    -trans--3: all 0.3s ease-out;
+}
+
+/* NAVIGATION FOR MOBILE DEVICE ( 1150PX ) */
+header {
+    position: relative;
+}
+
+.nav-item {
+    position: relative;
+}
+
+@media screen and (max-width: 1150px) {
+    .nav-item {
+        background-color: var(--font-color);
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+
+        padding: 6rem 3.5rem 4.5rem;
+
+        z-index: 100;
+
+        transition: all 0.3s ease-out;
+    }
+
+    .nav-links span {
+        color: var(--bg-color);
+    }
+
+    .nav-links i {
+        color: var(--bg-color);
+    }
+
+    .nav-links span::after {
+        background-color: var(--bg-color);
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+
+        width: 13rem;
+    }
+
+    .nav-list a {
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    /* ICON */
+    .close {
+        position: absolute;
+        top: 3.5%;
+        right: 4%;
+
+    }
+
+    .close i {
+        color: var(--bg-color);
+    }
+
+    /* ------------ */
+    /* SHOW-NAV-LIST */
+    /* ------------ */
+    .show-item {
+        left: 0;
+    }
+
+    .nav-items:nth-child(1) {
+        transition-delay: .1s;
+    }
+
+    .nav-items:nth-child(2) {
+        transition-delay: .2s;
+    }
+
+    .nav-items:nth-child(3) {
+        transition-delay: .3s;
+    }
+
+    /* .nav-items:nth-child(4) {
+        transition-delay: .4s;
+    } */
+
+}
+
+@media screen and (min-width: 1150px) {
+    .nav-item {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .nav-list {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .nav-links {
+        font-size: 1.5rem;
+        color: var(--font-color);
+        font-weight: 600;
+    }
+
+    .close {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

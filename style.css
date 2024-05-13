@@ -1,0 +1,222 @@
+:root {
+    --font-color: #212529;
+    --font-color--hover: #343a40;
+    --bg-color: #f8f9fa;
+
+    -font--logo: "Poppins", sans-serif;
+    -font--primary: "Montserrat Alternates", sans-serif;
+    -font-medium: 500;
+    -font-bold: 600;
+
+    -trans--3: all 0.3s ease-out;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 62.5%;
+    max-width: 130rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+body {
+    position: relative;
+}
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem;
+    background-color: #ced4da;
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--font-color);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links span {
+    color: var(--font-color);
+    transition: all 0.4s ease-out;
+    position: relative;
+}
+
+.nav-links:hover span {
+    margin-left: 2rem;
+}
+
+.nav-links span::after {
+    content: "";
+    height: 1px;
+    width: 0;
+    background-color: var(--font-color);
+
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    transition: all 0.3s ease-out;
+}
+
+.nav-links:hover span::after {
+    width: 100%;
+}
+
+/* ICON -------- */
+.nav-links i {
+    font-size: 1.5rem;
+    color: var(--font-color);
+    position: absolute;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-out;
+}
+
+.nav-links:hover i {
+    opacity: 1;
+    visibility: visible;
+}
+
+.close i,
+.menu i {
+    font-size: 3rem;
+    color: var(--font-color);
+
+    transition: all 0.3s ease-out;
+}
+
+.close i:hover,
+.menu i:hover {
+    transform: scale(1.1);
+}
+
+/* WELLCOME */
+.wellcome {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+}
+
+.content-wellcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-wellcome h1 {
+    font-size: 4rem;
+    color: var(--font-color);
+}
+
+.content-wellcome p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.crossbar-2 {
+    height: 1px;
+    width: 10rem;
+    background-color: #343a40;
+    margin: 0 auto;
+}
+
+main {
+    max-width: 100rem;
+    margin: 3rem auto;
+    padding: 3rem;
+}
+
+.container-coppy p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.container-coppy p span {
+    color: #c92a2a;
+}
+
+.link-products {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: #212529;
+    color: var(--bg-color);
+    padding: 0.8rem;
+    width: 20rem;
+    margin: 4rem auto;
+    text-align: center;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.378);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn button {
+    font-family: "Montserrat Alternates", sans-serif;
+    padding: 0.8rem 2rem 0.8rem 2rem;
+    border: 1px solid --font-color;
+    font-weight: 600;
+    cursor: pointer;
+
+    background-color: var(--bg-color);
+    transition: all 0.3s ease-out;
+}
+
+.btn button:hover {
+    background-color: #adb5bd;
+}
+
+.nav-items:has(.nav-links:hover) .nav-links:not(:hover) {
+    opacity: .4;
+}
+
+.section-coppy {
+    max-width: 80rem;
+    margin: 4rem auto;
+}
+
+.container-coppy {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 9999;
+}

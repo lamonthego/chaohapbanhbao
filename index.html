@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NE | baby</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="queries.css">
+    <link rel="stylesheet" href="socialsTyle.css">
+
+    <!-- BOX ICON -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- FONT GG -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- 2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="nav container">
+            <a href="#" class="logo">Chaohapbanhbao</a>
+
+            <div class="nav-menu">
+                <div class="nav-item">
+                    <ul class="nav-list">
+                        <li class="nav-items"><a href="#" class="nav-links">
+                                <i class='bx bx-chevron-right'></i>
+                                <span>Link đồ</span>
+                            </a></li>
+                        <li class="nav-items"><a href="#" class="nav-links">
+                                <i class='bx bx-chevron-right'></i>
+                                <span>Video hot</span>
+                            </a></li>
+                        <li class="nav-items"><a href="#" class="nav-links">
+                                <i class='bx bx-chevron-right'></i>
+                                <span>Liên hệ</span>
+                            </a></li>
+                    </ul>
+                    <div class="close">
+                        <i class='bx bx-x' id="icon-close"></i>
+                    </div>
+                </div>
+                <div class="menu">
+                    <i class='bx bx-menu-alt-right' id="icon-menu"></i>
+                </div>
+            </div>
+        </nav>
+        <div class="crossbar"></div>
+
+        <div class="wellcome">
+            <div class="content-wellcome">
+                <h1>fashion & ootd</h1>
+                <p> Phối đồ không cần theo xu hướng <br> chỉ cẩn mình thấy đẹp là được hihi</p>
+            </div>
+        </div>
+    </header>
+    <div class="crossbar-2"></div>
+    <main>
+        <section class="section-coppy">
+            <div class="container-coppy">
+                <p><span>Lưu ý :</span> Các bạn ấn vào Coppy rồi dán qua Trình Duyệt điện thoại bạn nha, cho mượt mà hơn
+                    nè
+                </p>
+                <div class="link-products">nabbyootd.com</div>
+                <div class="btn">
+                    <button id="copyButton">Coppy</button>
+                </div>
+            </div>
+        </section>
+        <section class="section-tiktok">
+            <div class="tiktok">
+                <h1 class="tiktok-text"><span>TOP:</span> video news</h1>
+                <div class="tiktok-video">
+
+                    <!-- 2  -->
+                    <script async src="https://www.tiktok.com/embed.js"></script>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION--SOCIAL -->
+        <section>
+            <div class="social">
+                <h1>Liên hệ với tui :</h1>
+                <div class="socials">
+                    <a href="#" class="scials-link">
+                        <i class='bx bxl-instagram-alt'></i>
+                    </a>
+                    <a href="#" class="scials-link">
+                        <i class='bx bxs-store'></i>
+                    </a>
+                    <a href="#" class="scials-link">
+                        <i class='bx bxl-messenger'></i>
+                    </a>
+                    <a href="#" class="scials-link">
+                        <i class='bx bxl-tiktok'></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menu = document.getElementById('icon-menu');
+            const close = document.getElementById('icon-close');
+            const navItem = document.querySelector('.nav-item');
+
+            menu.addEventListener('click', () => {
+                console.log('Menu clicked');
+                navItem.classList.add('show-item')
+            });
+
+            close.addEventListener('click', () => {
+                console.log('Close clicked');
+                navItem.classList.remove('show-item')
+            });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var copyButton = document.getElementById('copyButton');
+            var linkProducts = document.querySelector('.link-products');
+
+            copyButton.addEventListener('click', function () {
+                // Tạo một thẻ input để sao chép nội dung vào clipboard
+                var input = document.createElement('input');
+                input.setAttribute('value', linkProducts.textContent);
+                document.body.appendChild(input);
+
+                // Chọn và sao chép nội dung
+                input.select();
+                document.execCommand('copy');
+
+                // Xóa thẻ input đã tạo
+                document.body.removeChild(input);
+
+                // Thông báo cho người dùng biết nội dung đã được sao chép
+                alert('Đã Coppy ');
+            });
+        });
+    </script>
+</body>
+
+</html>

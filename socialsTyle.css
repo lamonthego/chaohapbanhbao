@@ -1,0 +1,21 @@
+section .social {
+    margin-top: 5rem;
+}
+
+.socials {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.scials-link i {
+    font-size: 4rem;
+    color: #212529;
+    transition: all 0.3s ease-out;
+}
+
+.scials-link i:hover {
+    transform: translateY(-4px);
+    color: #343a40;
+}
